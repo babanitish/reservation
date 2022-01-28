@@ -10,7 +10,7 @@ class Locality extends Model
     use HasFactory;
     protected $fillable = ['locality'];
 
-    protected $table = 'locality';
+    protected $table = 'localities';
 
     public $timestamps = false;
 

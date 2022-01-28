@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Locality;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Database\Seeder;
 
 class LocalitySeeder extends Seeder
@@ -13,15 +16,17 @@ class LocalitySeeder extends Seeder
      */
     public function run()
     {
-        
+
                 //Empty the table first
-                Type::truncate();
+                Locality::truncate();
         //Define data
         $localities = [
-            ['localities'=>'comédien'],
-            ['postal_code'=>'winston'],
+            ['locality'=>'uccle'],
+
+            ['locality'=>'saint-gilles'],
+
         ];
-        
+
         //Insert data in the table
         DB::table('localities')->insert($localities);
     }

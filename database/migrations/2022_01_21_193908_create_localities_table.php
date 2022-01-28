@@ -16,7 +16,6 @@ class CreateLocalitiesTable extends Migration
         Schema::create('localities', function (Blueprint $table) {
             $table->id();
             $table->string('locality')->lenght(60);
-            $table->string('postal_code')->lenght(20);
         });
     }
 

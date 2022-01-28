@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class RoleSeeder extends Seeder
 {
@@ -13,16 +15,16 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        
+
                 //Empty the table first
-                Type::truncate();
+                Role::truncate();
         //Define data
         $roles = [
             ['role'=>'comédien'],
             ['role'=>'scénographe'],
             ['role'=>'auteur'],
         ];
-        
+
         //Insert data in the table
         DB::table('roles')->insert($roles);
     }
