@@ -17,14 +17,32 @@ class LocalitySeeder extends Seeder
     public function run()
     {
 
-                //Empty the table first
-                Locality::truncate();
+        //Empty the table first
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        Locality::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+
+
+        //Empty the table first
+        Locality::truncate();
         //Define data
         $localities = [
-            ['locality'=>'uccle'],
-
-            ['locality'=>'saint-gilles'],
-
+            [
+                'locality' => 'uccle',
+                'postal_code' => '1170',
+            ],
+            [
+                'locality' => 'Bruxelles',
+                'postal_code' => '1000',
+            ],
+            [
+                'locality' => 'Bruxelles',
+                'postal_code' => '1000',
+            ],
+            [
+                'locality' => 'Bruxelles',
+                'postal_code' => '1000',
+            ],
         ];
 
         //Insert data in the table
