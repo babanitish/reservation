@@ -24,7 +24,7 @@ class LocalitySeeder extends Seeder
 
 
         //Empty the table first
-        Locality::truncate();
+      //  Locality::truncate();
         //Define data
         $localities = [
             [
