@@ -49,7 +49,15 @@ class Location extends Model
      */
     public function shows()
     {
-        return $this->hasMany(Show::class);
+        return $this->hasMany('App\Models\Show');
     }
-
+    
+    /**
+     * Get the representations in this location.
+     */
+    public function representations()
+    {
+        return $this->hasMany('App\Models\Representation');
+    }
+    
 }

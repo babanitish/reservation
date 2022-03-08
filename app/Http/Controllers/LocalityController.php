@@ -13,10 +13,12 @@ class LocalityController extends Controller
      */
     public function index()
     {
-        $locality = Locality::find();
+        $localities = Locality::all();
 
         return view('locality.index',[
-            'locality' => $locality,
+            'localities' => $localities,
+            'resource' => 'localités',
+
         ]);
 
     }

@@ -4,6 +4,7 @@
 
 @section('content')
     <article>
+          {{-- <?php dd($location->designation); ?>  --}}
         <h1>{{ $location->designation }}</h1>
         <address>
             <p>{{ $location->address }}</p>
@@ -26,6 +27,7 @@
         
         <h2>Liste des spectacles</h2>
         <ul>
+             {{-- <?php dd($location->shows); ?>   --}}
         @foreach($location->shows as $show)
             <li>{{ $show->title }}</li>
         @endforeach

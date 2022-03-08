@@ -7,6 +7,7 @@ use App\Http\Controllers\LocalityController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\RepresentationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +45,8 @@ Route::get('location/{id}', [LocationController::class, 'show'])
 Route::get('/show', [ShowController::class, 'index'])->name('show_index');
 Route::get('/show/{id}', [ShowController::class, 'show'])
     ->where('id', '[0-9]+')->name('show_show');
+
+Route::get('/representation', [RepresentationController::class, 'index'])
+    ->name('representation_index');
+Route::get('/representation/{id}', [RepresentationController::class, 'show'])
+    ->where('id', '[0-9]+')->name('representation_show');

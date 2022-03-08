@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use phpDocumentor\Reflection\Location;
 
 class Locality extends Model
 {
     use HasFactory;
-    protected $fillable = ['locality','postal_code'];
+    protected $fillable = ['postal_code','locality'];
 
     protected $table = 'localities';
 
@@ -20,7 +19,7 @@ class Locality extends Model
      */
 
     public function locations(){
-        return $this->hasMany(Location::class);
+        return $this->hasMany('App\Models\Location');
     }
 
 }
